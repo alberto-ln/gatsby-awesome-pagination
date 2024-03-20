@@ -35,6 +35,7 @@ export const paginate = (opts: PaginateOpts): void => {
     itemsPerFirstPage,
     pathPrefix,
     component,
+    slices,
     context
   } = opts;
 
@@ -77,6 +78,7 @@ export const paginate = (opts: PaginateOpts): void => {
     createPage({
       path,
       component,
+      slices,
       // Clone the passed `context` and extend our new pagination context values
       // on top of it.
       context: Object.assign({}, cloneDeep(context), {
