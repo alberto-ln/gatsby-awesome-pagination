@@ -24,7 +24,7 @@ type PaginateOpts = {
   itemsPerFirstPage?: number,
   pathPrefix: PathPrefix,
   component: string,
-  context?: {}
+  context?: {},
   slices? : {}
 };
 export const paginate = (opts: PaginateOpts): void => {
