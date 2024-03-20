@@ -25,6 +25,7 @@ type PaginateOpts = {
   pathPrefix: PathPrefix,
   component: string,
   context?: {}
+  slices? : {}
 };
 export const paginate = (opts: PaginateOpts): void => {
   const {
@@ -141,7 +142,8 @@ export const createPagePerItem = (opts: CreatePagePerItemOpts): void => {
     createPage({
       path,
       component,
-      context
+      context,
+      slices
     });
   })(items.length);
 };
